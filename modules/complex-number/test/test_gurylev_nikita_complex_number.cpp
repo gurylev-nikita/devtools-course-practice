@@ -3,7 +3,6 @@
 #include <gtest/gtest.h>
 
 #include <tuple>
-
 #include <cmath>
 
 #include "include/complex_number.h"
