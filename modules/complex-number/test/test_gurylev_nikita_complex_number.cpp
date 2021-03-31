@@ -23,7 +23,6 @@ TEST(Gurylev_Nikita_ComplexNumberTest, ArithmeticOperation) {
     ComplexNumber q(4.0, 3.0);
 
     ComplexNumber num1 = (z + q) * (z - q);
-    ComplexNumber num2 = (z + q) * (z - q);
     ComplexNumber result(-24.0, 120.0);
 
     ASSERT_EQ(result, num1);
