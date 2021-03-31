@@ -31,18 +31,18 @@ TEST(Gurylev_Nikita_ComplexNumberTest, ArithmeticOperation) {
 }
 
 typedef testing::TestWithParam<std::tuple<double, double, double, double>>
-Gurylev_Nikita_ComplexNumberTestTest_Param;
-TEST_P(Gurylev_Nikita_ComplexNumberTestTest_Param, ÑomparisonOperation) {
+Gurylev_Nikita_ComplexNumberTest_Param;
+TEST_P(Gurylev_Nikita_ComplexNumberTest_Param, ComparisonOperation) {
     ComplexNumber num1(std::get<0>(GetParam()), std::get<1>(GetParam()));
     ComplexNumber num2(std::get<2>(GetParam()), std::get<3>(GetParam()));
 
-    ComplexNumber result1 = ((num2 * num1) / num1); 
+    ComplexNumber result1 = ((num2 * num1) / num1);
     ComplexNumber result2 = ((result1 / num2) * num1);
 
     ASSERT_EQ(result2, num1);
 }
 
-INSTANTIATE_TEST_CASE_P(/**/, Gurylev_Nikita_ComplexNumberTestTest_Param,
+INSTANTIATE_TEST_CASE_P(/**/, Gurylev_Nikita_ComplexNumberTest_Param,
     testing::Values(
         std::make_tuple(2.0, 6.0, 6.0, 15.0),
         std::make_tuple(2.0, 4.0, 0.0, 5.0),
