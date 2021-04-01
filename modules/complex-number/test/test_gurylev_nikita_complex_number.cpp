@@ -45,4 +45,4 @@ INSTANTIATE_TEST_CASE_P(/**/, Gurylev_Nikita_ComplexNumberTest_Param,
         std::make_tuple(2.0, 3.0, 5.7, 1.5),
         std::make_tuple(6.0, 2.0, 4.0, 5.0),
         std::make_tuple(4.5, 7.0, 9.0, 3.0),
-        std::make_tuple(3.0, 3.0, 4.0, 4.0)));
+        std::make_tuple(3.0, 3.0, 5.0, 4.0)));
