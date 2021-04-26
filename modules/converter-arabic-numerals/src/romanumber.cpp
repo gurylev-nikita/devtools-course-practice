@@ -1,6 +1,7 @@
 // Copyright 2021 Gurylev Nikita
 
 #include <string>
+
 #include "include/romanumber.h"
 
 std::string RomaNumber::RomaConvert(int n, int rank) {
