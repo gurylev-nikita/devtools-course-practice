@@ -87,10 +87,6 @@ TEST(Test_Roma_Number, test14) {
 }
 
 TEST(Test_Roma_Number, test15) {
-    RomaNumber a1, a2;
-    for (int i = 0; i < 1000; ++i) {
-        a1.ArabToRoma(i);
-        a2.RomaToArab(a1.GetRoma());
-        EXPECT_EQ(i, a2.GetArabic());
-    }
+    std::string r = "AX";
+    ASSERT_ANY_THROW(RomaNumber a(r));
 }
