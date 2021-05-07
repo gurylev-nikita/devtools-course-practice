@@ -5,23 +5,23 @@
 #include "include/romanumber.h"
 
 std::string RomaNumber::RomaConvert(int n, int rank) {
-    if (rank == 4)
-    {
+    if (rank == 4) {
         std::string arr[3] = { "M", "MM", "MMM" };
         return arr[n - 1];
     }
-    if (rank == 3)
-    {
-        std::string arr[9] = { "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
+    if (rank == 3) {
+        std::string arr[9] = { "C", "CC", "CCC", "CD",
+            "D", "DC", "DCC", "DCCC", "CM" };
         return arr[n - 1];
     }
-    if (rank == 2)
-    {
-        std::string arr[9] = { "X", "XX","XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
+    if (rank == 2) {
+        std::string arr[9] = { "X", "XX", "XXX", "XL",
+            "L", "LX", "LXX", "LXXX", "XC" };
         return arr[n - 1];
     }
     if (rank == 1) {
-        std::string arr[9] = { "I","II","III","IV","V","VI","VII","VIII","IX" };
+        std::string arr[9] = { "I", "II", "III", "IV",
+            "V", "VI", "VII", "VIII", "IX" };
         return arr[n - 1];
     }
     return "";
