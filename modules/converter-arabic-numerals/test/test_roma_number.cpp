@@ -21,7 +21,7 @@ TEST(Test_Roma_Number, Create_With_Arab) {
 }
 
 TEST(Test_Roma_Number, Cant_Create_With_Big_Arab) {
-    ASSERT_ANY_THROW(RomaNumber a(5000));
+    ASSERT_ANY_THROW(RomaNumber a(10000));
 }
 
 TEST(Test_Roma_Number, Cant_Create_With_Negative_Number) {
