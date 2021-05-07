@@ -5,53 +5,29 @@
 #include "include/romanumber.h"
 
 std::string RomaNumber::RomaConvert(int n, int rank) {
-    if (rank == 4) {
-        switch (n) {
-        case 1: return "M"; break;
-        case 2: return "MM"; break;
-        case 3: return "MMM"; break;
-        }
-    } else if (rank == 3) {
-        switch (n) {
-        case 1: return "C"; break;
-        case 2: return "CC"; break;
-        case 3: return "CCC"; break;
-        case 4: return "CD"; break;
-        case 5: return "D"; break;
-        case 6: return "DC"; break;
-        case 7: return "DCC"; break;
-        case 8: return "DCCC"; break;
-        case 9: return "CM"; break;
-        }
-    } else if (rank == 2) {
-        switch (n) {
-        case 1: return "X"; break;
-        case 2: return "XX"; break;
-        case 3: return "XXX"; break;
-        case 4: return "XL"; break;
-        case 5: return "L"; break;
-        case 6: return "LX"; break;
-        case 7: return "LXX"; break;
-        case 8: return "LXXX"; break;
-        case 9: return "XC"; break;
-        }
-    } else if (rank == 1) {
-        switch (n) {
-        case 1: return "I"; break;
-        case 2: return "II"; break;
-        case 3: return "III"; break;
-        case 4: return "IV"; break;
-        case 5: return "V"; break;
-        case 6: return "VI"; break;
-        case 7: return "VII"; break;
-        case 8: return "VIII"; break;
-        case 9: return "IX"; break;
-        }
+    if (rank == 4)
+    {
+        std::string arr[3] = { "M", "MM", "MMM" };
+        return arr[n - 1];
+    }
+    if (rank == 3)
+    {
+        std::string arr[9] = { "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
+        return arr[n - 1];
+    }
+    if (rank == 2)
+    {
+        std::string arr[9] = { "X", "XX","XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
+        return arr[n - 1];
+    }
+    if (rank == 1) {
+        std::string arr[9] = { "I","II","III","IV","V","VI","VII","VIII","IX" };
+        return arr[n - 1];
     }
     return "";
 }
 
-void RomaNumber::ArabToRoma(int ar) {
+void RomaNumber::arabToRoma(int ar) {
     if (ar < 0 || ar > 3999)
         throw "Wrong number";
     arabic_ = ar;
@@ -62,7 +38,7 @@ void RomaNumber::ArabToRoma(int ar) {
     }
 }
 
-void RomaNumber::RomaToArab(std::string ro) {
+void RomaNumber::romaToArab(const std::string& ro) {
     int _ar = 0;
     int n = ro.length();
     for (int i = 0; i < n; ++i) {
@@ -97,14 +73,14 @@ void RomaNumber::RomaToArab(std::string ro) {
 }
 
 RomaNumber::RomaNumber(int ar) {
-    ArabToRoma(ar);
+    arabToRoma(ar);
 }
 
-RomaNumber::RomaNumber(std::string ro) {
+RomaNumber::RomaNumber(const std::string& ro) {
     if (!IsStringCorrect(ro))
         throw "Wrong string";
     else
-        RomaToArab(ro);
+        romaToArab(ro);
 }
 
 bool RomaNumber::IsStringCorrect(std::string ro) {

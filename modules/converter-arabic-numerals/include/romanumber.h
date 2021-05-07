@@ -13,12 +13,12 @@ class RomaNumber {
     std::string RomaConvert(int, int);
  public:
     RomaNumber() : roma_(""), arabic_(0) { }
-    explicit RomaNumber(std::string);
+    explicit RomaNumber(const std::string&);
     explicit RomaNumber(int ar);
-    void RomaToArab(std::string);
-    void ArabToRoma(int ar);
-    std::string GetRoma() { return roma_; }
-    int GetArabic() { return arabic_; }
+    void romaToArab(const std::string&);
+    void arabToRoma(int ar);
+    std::string getRoma() { return roma_; }
+    int getArabic() { return arabic_; }
 };
 
 #endif  // MODULES_CONVERTER_ARABIC_NUMERALS_INCLUDE_ROMANUMBER_H_
