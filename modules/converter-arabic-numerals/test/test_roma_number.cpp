@@ -79,6 +79,15 @@ TEST(Test_Roma_Number, Correct_Convert_Roma) {
     ASSERT_EQ("D", s.getRoma());
 }
 
+TEST(Test_Roma_Number, Correct_Convert_All_Arab) {
+    RomaNumber a1, a2;
+    for (int i = 0; i < 10; ++i) {
+        a1.arabToRoma(i);
+        a2.romaToArab(a1.getRoma());
+        ASSERT_EQ(i, a2.getArabic());
+    }
+}
+
 TEST(Test_Roma_Number, Cant_Create_With_Wrong_String) {
     std::string r = "AX";
     ASSERT_ANY_THROW(RomaNumber a(r));
