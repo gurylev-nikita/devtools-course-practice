@@ -81,7 +81,7 @@ TEST(Test_Roma_Number, Correct_Convert_Roma) {
 
 TEST(Test_Roma_Number, Correct_Convert_All_Arab) {
     RomaNumber a1, a2;
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 1; i < 10; ++i) {
         a1.arabToRoma(i);
         a2.romaToArab(a1.getRoma());
         ASSERT_EQ(i, a2.getArabic());
