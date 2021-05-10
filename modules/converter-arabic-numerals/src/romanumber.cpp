@@ -22,11 +22,9 @@ std::string RomaNumber::RomaConvert(int n, int rank) {
             "L", "LX", "LXX", "LXXX", "XC" };
         return arr[n - 1];
     }
-    if (rank == 1) {
         std::string arr[9] = { "I", "II", "III", "IV",
             "V", "VI", "VII", "VIII", "IX" };
         return arr[n - 1];
-    }
 }
 
 void RomaNumber::arabToRoma(int ar) {
