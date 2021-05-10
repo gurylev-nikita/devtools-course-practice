@@ -5,6 +5,9 @@
 #include "include/romanumber.h"
 
 std::string RomaNumber::RomaConvert(int n, int rank) {
+    if (n == 0) {
+        return "";
+    }
     if (rank == 4) {
         std::string arr[3] = { "M", "MM", "MMM" };
         return arr[n - 1];
@@ -24,7 +27,7 @@ std::string RomaNumber::RomaConvert(int n, int rank) {
             "V", "VI", "VII", "VIII", "IX" };
         return arr[n - 1];
     }
-    return 0;
+    return "";
 }
 
 void RomaNumber::arabToRoma(int ar) {
@@ -51,10 +54,16 @@ void RomaNumber::romaToArab(const std::string& ro) {
         } else if (t == 'V') {
             _ar += 5;
         } else if (t == 'X') {
+            if (ro[i + 1] == 'L' || ro[i + 1] == 'C')
+                _ar -= 10;
+            else
                 _ar += 10;
         } else if (t == 'L') {
             _ar += 50;
         } else if (t == 'C') {
+            if (ro[i + 1] == 'D' || ro[i + 1] == 'M')
+                _ar -= 100;
+            else
                 _ar += 100;
         } else if (t == 'D') {
             _ar += 500;
