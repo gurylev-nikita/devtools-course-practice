@@ -27,7 +27,6 @@ std::string RomaNumber::RomaConvert(int n, int rank) {
             "V", "VI", "VII", "VIII", "IX" };
         return arr[n - 1];
     }
-    return "";
 }
 
 void RomaNumber::arabToRoma(int ar) {
