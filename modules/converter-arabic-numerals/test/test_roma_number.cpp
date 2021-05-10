@@ -72,20 +72,53 @@ TEST(Test_Roma_Number, Correct_Create_With_String) {
     ASSERT_EQ(8, a.getArabic());
 }
 
-TEST(Test_Roma_Number, Correct_Convert_Roma) {
+TEST(Test_Roma_Number, Correct_Convert_Roma1) {
+    RomaNumber s;
+    s.romaToArab("I");
+    ASSERT_EQ(1, s.getArabic());
+    ASSERT_EQ("I", s.getRoma());
+}
+
+TEST(Test_Roma_Number, Correct_Convert_Roma2) {
+    RomaNumber s;
+    s.romaToArab("V");
+    ASSERT_EQ(5, s.getArabic());
+    ASSERT_EQ("V", s.getRoma());
+}
+
+TEST(Test_Roma_Number, Correct_Convert_Roma3) {
+    RomaNumber s;
+    s.romaToArab("X");
+    ASSERT_EQ(10, s.getArabic());
+    ASSERT_EQ("X", s.getRoma());
+}
+
+TEST(Test_Roma_Number, Correct_Convert_Roma4) {
+    RomaNumber s;
+    s.romaToArab("L");
+    ASSERT_EQ(50, s.getArabic());
+    ASSERT_EQ("L", s.getRoma());
+}
+
+TEST(Test_Roma_Number, Correct_Convert_Roma5) {
+    RomaNumber s;
+    s.romaToArab("C");
+    ASSERT_EQ(100, s.getArabic());
+    ASSERT_EQ("C", s.getRoma());
+}
+
+TEST(Test_Roma_Number, Correct_Convert_Roma6) {
     RomaNumber s;
     s.romaToArab("D");
     ASSERT_EQ(500, s.getArabic());
     ASSERT_EQ("D", s.getRoma());
 }
 
-TEST(Test_Roma_Number, Correct_Convert_All_Arab) {
-    RomaNumber a1, a2;
-    for (int i = 1; i < 10; ++i) {
-        a1.arabToRoma(i);
-        a2.romaToArab(a1.getRoma());
-        ASSERT_EQ(i, a2.getArabic());
-    }
+TEST(Test_Roma_Number, Correct_Convert_Roma7) {
+    RomaNumber s;
+    s.romaToArab("M");
+    ASSERT_EQ(1000, s.getArabic());
+    ASSERT_EQ("M", s.getRoma());
 }
 
 TEST(Test_Roma_Number, Cant_Create_With_Wrong_String) {

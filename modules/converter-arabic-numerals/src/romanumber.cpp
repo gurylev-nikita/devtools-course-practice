@@ -24,7 +24,6 @@ std::string RomaNumber::RomaConvert(int n, int rank) {
             "V", "VI", "VII", "VIII", "IX" };
         return arr[n - 1];
     }
-    return "";
 }
 
 void RomaNumber::arabToRoma(int ar) {
@@ -83,7 +82,7 @@ RomaNumber::RomaNumber(const std::string& ro) {
         romaToArab(ro);
 }
 
-bool RomaNumber::IsStringCorrect(std::string ro) {
+bool RomaNumber::IsStringCorrect(const std::string& ro) {
     int n = ro.length();
     for (int i = 0; i < n; ++i) {
         bool flag = (ro[i] == 'I' || ro[i] == 'V' ||

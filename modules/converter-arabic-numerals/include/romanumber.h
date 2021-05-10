@@ -9,7 +9,7 @@ class RomaNumber {
  private:
     std::string roma_;
     int arabic_;
-    bool IsStringCorrect(std::string);
+    bool IsStringCorrect(const std::string&);
     std::string RomaConvert(int, int);
  public:
     RomaNumber() : roma_(""), arabic_(0) { }
