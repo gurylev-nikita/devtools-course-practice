@@ -28,7 +28,7 @@ TEST(Test_Roma_Number, Cant_Create_With_Negative_Number) {
     ASSERT_ANY_THROW(RomaNumber a(-3));
 }
 
-TEST(Test_Roma_Number, Correct_Convert_Arab) {
+TEST(Test_Roma_Number, Correct_Convert_Arab1) {
     RomaNumber s;
     s.arabToRoma(3);
     ASSERT_EQ(3, s.getArabic());
@@ -119,6 +119,15 @@ TEST(Test_Roma_Number, Correct_Convert_Roma7) {
     s.romaToArab("M");
     ASSERT_EQ(1000, s.getArabic());
     ASSERT_EQ("M", s.getRoma());
+}
+
+TEST(Test_Roma_Number, Correct_Convert_Arab) {
+    RomaNumber a1, a2;
+    for (int i = 0; i < 10; ++i) {
+        a1.arabToRoma(i);
+        a2.romaToArab(a1.getRoma());
+        ASSERT_EQ(i, a2.getArabic());
+    }
 }
 
 TEST(Test_Roma_Number, Cant_Create_With_Wrong_String) {
