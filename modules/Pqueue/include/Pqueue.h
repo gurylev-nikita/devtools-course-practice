@@ -1,4 +1,5 @@
 // Copyright 2021 Makarychev Sergey
+
 #ifndef MODULES_PQUEUE_INCLUDE_PQUEUE_H_
 #define MODULES_PQUEUE_INCLUDE_PQUEUE_H_
 
@@ -16,10 +17,6 @@ struct PriorityQueueElem {
 };
 
 class PQueue {
- private:
-  int size;
-  int count;
-  std::vector<PriorityQueueElem> elems;
  public:
   explicit PQueue(int size = 10);
   PQueue(const PQueue& q);
@@ -29,6 +26,10 @@ class PQueue {
   PriorityQueueElem Pop();
   bool operator == (const PQueue& pq) const;
   bool operator != (const PQueue& pq) const;
+ private:
+    int size;
+    int count;
+    std::vector<PriorityQueueElem> elems;
 };
 
 #endif  // MODULES_PQUEUE_INCLUDE_PQUEUE_H_

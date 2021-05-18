@@ -1,8 +1,10 @@
 // Copyright 2021 Gurylev Nikita
+
 #ifndef MODULES_PQUEUE_INCLUDE_PQUEUE_APPLICATION_H_
 #define MODULES_PQUEUE_INCLUDE_PQUEUE_APPLICATION_H_
 
 #include <string>
+
 #include "include/Pqueue.h"
 
 class PriorityApp {
