@@ -17,7 +17,7 @@ void PriorityApp::Help(const char* appname, const char* message) {
         "pop - extract from queue\n";
 }
 
-std::string PriorityApp::operator()(int argc, const char **argv) {
+std::string PriorityApp::operator()(int argc, const char** argv) {
     if (!ValidateNumberOfArguments(argc, argv)) {
         Help(*argv);
         return message_;
