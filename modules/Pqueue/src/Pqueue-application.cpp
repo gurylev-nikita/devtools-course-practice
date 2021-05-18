@@ -12,9 +12,9 @@ void PriorityApp::Help(const char* appname, const char* message) {
         std::string(message) +
         "This is a priority queue application.\n\n" \
         "Please provide arguments in the following format:\n\n" \
-        " $ " + appname + " <actions> " +
-        "Where <actions> are operations (push/pop):\n"
-        "push <priority> <value> - insert in queue\n"
+        " $ " + appname + " <actions> " \
+        "Where <actions> are operations (push/pop):\n" \
+        "push <priority> <value> - insert in queue\n" \
         "pop - extract from queue\n";
 }
 
