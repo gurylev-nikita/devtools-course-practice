@@ -1,6 +1,6 @@
 // Copyright 2021 Gurylev Nikita
-#ifndef MODULES_PRIORITY_QUEUE_INCLUDE_PRIORITY_QUEUE_APPLICATION_H_
-#define MODULES_PRIORITY_QUEUE_INCLUDE_PRIORITY_QUEUE_APPLICATION_H_
+#ifndef MODULES_PQUEUE_INCLUDE_PQUEUE_APPLICATION_H_
+#define MODULES_PQUEUE_INCLUDE_PQUEUE_APPLICATION_H_
 
 #include <string>
 #include "include/Pqueue.h"
@@ -17,4 +17,4 @@ class PriorityApp {
     std::string operator()(int argc, const char** argv);
 };
 
-#endif  // MODULES_PRIORITY_QUEUE_INCLUDE_PRIORITY_QUEUE_APPLICATION_H_
+#endif  // MODULES_PQUEUE_INCLUDE_PQUEUE_APPLICATION_H_
