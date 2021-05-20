@@ -44,8 +44,8 @@ bool PriorityApp::ValidateNumberOfArguments(int argc, const char** argv) {
 
 int PriorityApp::ParseOperation(const char** argv) {
     if (std::strcmp(*argv, "push") == 0) {
-        int p = std::atoi(*(argv + 1));
-        int v = std::atoi(*(argv + 2));
+        int p = std::stoi(*(argv + 1));
+        int v = std::stoi(*(argv + 2));
         PriorityQueueElem a(p, v);
         q.Push(a);
         return 3;
